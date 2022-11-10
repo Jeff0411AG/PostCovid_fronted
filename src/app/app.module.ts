@@ -31,7 +31,13 @@ import { EncuestaComponent } from './page/encuesta/encuesta.component';
 //Pregunta
 
 //consulta
-
+ 
+//Paciente
+import { PacienteBuscarComponent } from './page/paciente/paciente-buscar/paciente-buscar.component';
+import { PacienteMensajeComponent } from './page/paciente/paciente-listar/paciente-mensaje/paciente-mensaje.component';
+import { PacienteListarComponent } from './page/paciente/paciente-listar/paciente-listar.component';
+import { PacienteCreaeditaComponent } from './page/paciente/paciente-creaedita/paciente-creaedita.component';
+import { PacienteComponent } from './page/paciente/paciente.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +57,13 @@ import { EncuestaComponent } from './page/encuesta/encuesta.component';
 
     //consulta
    
+
+    //paciente
+    PacienteCreaeditaComponent,
+    PacienteListarComponent,
+    PacienteBuscarComponent,
+    PacienteMensajeComponent,
+    PacienteComponent,
   ],
   imports: [
     BrowserModule,
