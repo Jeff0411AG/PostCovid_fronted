@@ -43,9 +43,6 @@ import { PreguntaBuscarComponent } from './page/pregunta/pregunta-buscar/pregunt
 import { PreguntaDialogoComponent } from './page/pregunta/pregunta-listar/pregunta-dialogo/pregunta-dialogo.component';
 
 
-
-
-
 //consulta
 
 
