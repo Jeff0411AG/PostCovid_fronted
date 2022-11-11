@@ -1,9 +1,14 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 //doctor
 import { DoctorEditarComponent } from './page/doctor/doctor-editar/doctor-editar.component';
 import { DoctorComponent } from './page/doctor/doctor.component';
+
+
+//pregunta
+import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
+import { PreguntaComponent } from './page/pregunta/pregunta.component';
 
 const routes: Routes = [
   {
@@ -11,16 +16,14 @@ const routes: Routes = [
         { path: 'nuevo', component: DoctorEditarComponent },
         { path: 'edicion/:id', component: DoctorEditarComponent }
     ]
-}
-//agregar path
-/*,
-{
-  path: 'propietarios', component: PropietarioComponent, children: [
-      { path: 'nuevo', component: PropietarioEditarComponent },
-      { path: 'edicion/:id', component: PropietarioEditarComponent }
-  ]
-}
-*/
+  },
+  
+  {
+    path:'pregunta', component: PreguntaComponent, children:[
+        {path:'nuevo', component:PreguntaEditarComponent},
+        {path:'edicion/:id', component:PreguntaEditarComponent}
+    ]
+  }
 
 ];
 

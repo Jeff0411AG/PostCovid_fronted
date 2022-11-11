@@ -28,7 +28,17 @@ import { DoctorDialogoComponent } from './page/doctor/doctor-listar/doctor-dialo
 //Encuesta
 import { EncuestaComponent } from './page/encuesta/encuesta.component';
 
+
 //Pregunta
+import { PreguntaComponent } from './page/pregunta/pregunta.component';
+import { PreguntaListarComponent } from './page/pregunta/pregunta-listar/pregunta-listar.component';
+import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
+import { PreguntaBuscarComponent } from './page/pregunta/pregunta-buscar/pregunta-buscar.component';
+import { PreguntaDialogoComponent } from './page/pregunta/pregunta-listar/pregunta-dialogo/pregunta-dialogo.component';
+
+
+
+
 
 //consulta
 
@@ -47,7 +57,18 @@ import { EncuestaComponent } from './page/encuesta/encuesta.component';
     //Encuesta-Jefferson
     EncuestaComponent,
 
+
     //pregunta
+    PreguntaComponent,
+    PreguntaListarComponent,
+    PreguntaEditarComponent,
+    PreguntaBuscarComponent,
+    PreguntaDialogoComponent,
+
+    
+    
+
+
 
     //consulta
    
