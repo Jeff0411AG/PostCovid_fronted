@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Pacientes</title>
+</head>
+<body>
+    
+    <router-outlet></router-outlet>
+
+<div [hidden]="route.children.length !== 0">
+    
+    <app-paciente-listar> </app-paciente-listar>
+
+
+</div>
+
+
+
+</body>
+</html>

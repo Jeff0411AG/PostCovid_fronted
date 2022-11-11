@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Paciente</h1>
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput  placeholder="idPaciente" [(ngModel)]="paciente.idPaciente">
+        </mat-form-field>
+        
+        <br>
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre</mat-label>
+            <input matInput required placeholder="namePaciente" [(ngModel)]="paciente.namePaciente">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellido</mat-label>
+            <input matInput required placeholder="lastNamePaciente" [(ngModel)]="paciente.lastNamePaciente">
+        </mat-form-field>
+        
+       <br>
+        
+       
+
+         <mat-form-field class="example-full-width">
+            <mat-label>fecha</mat-label>
+            <input matInput required placeholder="birthday" [(ngModel)]="paciente.birthday">
+        </mat-form-field>
+        
+        <br>
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Telefono</mat-label>
+            <input matInput required placeholder="numberPhone" [(ngModel)]="paciente.numberPhone">
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>numero de historia</mat-label>
+            <input matInput required placeholder="numhistoria" [(ngModel)]="paciente.numhistoria">
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Diagnostico</mat-label>
+            <input matInput required placeholder="diagnostico" [(ngModel)]="paciente.diagnostico">
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Version</mat-label>
+            <input matInput required placeholder="version" [(ngModel)]="paciente.version">
+        </mat-form-field>
+        
+        <br>
+
+
+        <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+        <button mat-raised-button color="accent" routerLink="/paciente">Cancelar</button>
+        <p>{{mensaje}}</p>
+        </div>
+        
+
+
+</body>
+</html>

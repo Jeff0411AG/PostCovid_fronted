@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { EMPTY,Subject } from 'rxjs';
-import { environment } from 'src/environments/environment';
+//import { environment } from 'src/environments/environment';
 import { Doctor } from '../model/doctor';
 
 @Injectable({
@@ -9,7 +9,12 @@ import { Doctor } from '../model/doctor';
 })
 export class DoctorService {
   //private url:string=environment.host+"/        "
-  private url: string = `${environment.host}/doctor`
+
+  //private url: string = `${environment.host}/doctor`
+
+  private url: string = "http://localhost:8084/doctor"
+
+  
   private listaCambio = new Subject<Doctor[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

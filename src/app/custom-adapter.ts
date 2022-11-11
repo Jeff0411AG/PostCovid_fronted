@@ -18,7 +18,7 @@ export class CustomDateAdapter extends NativeDateAdapter {
     return isNaN(timestamp) ? null : new Date(timestamp);
   }
 
-    formatb(date: Date, displayFormat: Object): string {
+    formata(date: Date, displayFormat: Object): string {
     date = new Date(Date.UTC(
       date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(),
       date.getMinutes(), date.getSeconds(), date.getMilliseconds()));
