@@ -42,6 +42,13 @@ import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunt
 import { PreguntaBuscarComponent } from './page/pregunta/pregunta-buscar/pregunta-buscar.component';
 import { PreguntaDialogoComponent } from './page/pregunta/pregunta-listar/pregunta-dialogo/pregunta-dialogo.component';
 
+//Tarjeta-Edwin
+import { TarjetaComponent } from './page/tarjeta/tarjeta.component';
+import { TarjetaListarComponent } from './page/tarjeta/tarjeta-listar/tarjeta-listar.component';
+import { TarjetaEditarComponent } from './page/tarjeta/tarjeta-editar/tarjeta-editar.component';
+import { TarjetaBuscarComponent } from './page/tarjeta/tarjeta-buscar/tarjeta-buscar.component';
+import { TarjetaDialogoComponent } from './page/tarjeta/tarjeta-listar/tarjeta-dialogo/tarjeta-dialogo.component';
+
 
 //consulta
 
@@ -75,6 +82,13 @@ import { PreguntaDialogoComponent } from './page/pregunta/pregunta-listar/pregun
     PreguntaEditarComponent,
     PreguntaBuscarComponent,
     PreguntaDialogoComponent,
+
+     //tarjeta
+     TarjetaComponent,
+     TarjetaListarComponent,
+     TarjetaEditarComponent,
+     TarjetaBuscarComponent,
+     TarjetaDialogoComponent,
 
     
     

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+</head>
+<body>
+    
+    <div class="container" >
+        <h1>Tarjeta</h1>
+        
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput  placeholder="idTarjeta" [(ngModel)]="tarjeta.idTarjeta">
+        </mat-form-field>
+        
+        <br>
+        
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>Método de Pago</mat-label>
+            <input matInput required placeholder="metodoPayment" [(ngModel)]="tarjeta.metodoPayment">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>Número de cuenta</mat-label>
+            <input matInput required placeholder="metodoPayment" [(ngModel)]="tarjeta.metodoPayment">
+        </mat-form-field>  
+
+        <br>
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>Fecha de Expiración</mat-label>
+            <input matInput required placeholder="dateExpiration" [(ngModel)]="tarjeta.dateExpiration">
+        </mat-form-field>  
+
+        <br>
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>Número CVC</mat-label>
+            <input matInput required placeholder="numberCvc" [(ngModel)]="tarjeta.numberCvc">
+        </mat-form-field> 
+        
+        <!--- Para el ManyToOne  -->
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Seleccione Paciente</mat-label>
+            <mat-select [(value)]="idPacientesSeleccionado" required>
+                <mat-option *ngFor="let d of listaPacientes" [value]="d.idPaciente">
+                    {{d.namePaciente}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+ 
+        <!--- Para el ManyToOne  -->
+
+        <br>
+
+        <button style="margin: 10px" mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+        <button style="margin: 10px" mat-raised-button color="accent" routerLink="/tarjeta">Cancelar</button>
+        <p>{{mensaje}}</p>
+        </div>
+        
+</body>
+</html>
+

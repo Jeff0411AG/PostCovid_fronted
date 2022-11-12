@@ -10,6 +10,9 @@ import { PacienteEditarComponent } from './page/paciente/paciente-editar/pacient
 //pregunta
 import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
 import { PreguntaComponent } from './page/pregunta/pregunta.component';
+//tarjeta
+import { TarjetaEditarComponent } from './page/tarjeta/tarjeta-editar/tarjeta-editar.component';
+import { TarjetaComponent } from './page/tarjeta/tarjeta.component';
 
 const routes: Routes = [
   {
@@ -28,6 +31,12 @@ const routes: Routes = [
   path:'pregunta', component: PreguntaComponent, children:[
       {path:'nuevo', component:PreguntaEditarComponent},
       {path:'edicion/:id', component:PreguntaEditarComponent}
+  ]
+},
+{
+  path:'tarjeta', component: TarjetaComponent, children:[
+      {path:'nuevo', component:TarjetaEditarComponent},
+      {path:'edicion/:id', component:TarjetaEditarComponent}
   ]
 }
 
