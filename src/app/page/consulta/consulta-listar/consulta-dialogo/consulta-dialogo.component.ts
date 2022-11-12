@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { ConsultaService } from 'src/app/service/consulta.service';
 
 @Component({
   selector: 'app-consulta-dialogo',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultaDialogoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private consultaService: ConsultaService,
+     private dialogRef: MatDialogRef<ConsultaDialogoComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  confirmar(estado: boolean){
+    this.consultaService.setConfirmaEliminacion(estado);
+    this.dialogRef.close();
   }
 
 }
