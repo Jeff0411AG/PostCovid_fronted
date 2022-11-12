@@ -1,1 +1,72 @@
-<p>consulta-editar works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+</head>
+<body>
+    
+    <div class="container" >
+        <h1>Consulta</h1>
+        
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput  placeholder="idConsulta" [(ngModel)]="consulta.idConsulta">
+        </mat-form-field>
+        
+        <br>
+        
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>fechaConsulta</mat-label>
+            <input matInput required placeholder="fechaConsulta" [(ngModel)]="consulta.fechaConsulta">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>diagnositco</mat-label>
+            <input matInput required placeholder="diagnositco" [(ngModel)]="consulta.diagnositco">
+        </mat-form-field> 
+
+        <br>
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>observacion</mat-label>
+            <input matInput required placeholder="observacion" [(ngModel)]="consulta.observacion">
+        </mat-form-field>  
+        
+
+
+        <!--- Para el ManyToOne  -->
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Seleccione Doctor</mat-label>
+            <mat-select [(value)]="idDoctorSeleccionado" required>
+                <mat-option *ngFor="let d of listaDoctores" [value]="d.idDoctor">
+                    {{d.nameDoctor}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+ 
+        <!--- Para el ManyToOne  -->
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Seleccione Paciente</mat-label>
+            <mat-select [(value)]="idPacienteSeleccionado" required>
+                <mat-option *ngFor="let p of listaPacientes" [value]="p.idPaciente">
+                    {{p.namePaciente}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+
+        <br>
+
+        <button style="margin: 10px" mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+        <button style="margin: 10px" mat-raised-button color="accent" routerLink="/consulta">Cancelar</button>
+        <p>{{mensaje}}</p>
+        </div>
+        
+</body>
+</html>

@@ -41,6 +41,8 @@ import { PreguntaListarComponent } from './page/pregunta/pregunta-listar/pregunt
 import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
 import { PreguntaBuscarComponent } from './page/pregunta/pregunta-buscar/pregunta-buscar.component';
 import { PreguntaDialogoComponent } from './page/pregunta/pregunta-listar/pregunta-dialogo/pregunta-dialogo.component';
+
+//consulta
 import { ConsultaComponent } from './page/consulta/consulta.component';
 import { ConsultaListarComponent } from './page/consulta/consulta-listar/consulta-listar.component';
 import { ConsultaDialogoComponent } from './page/consulta/consulta-listar/consulta-dialogo/consulta-dialogo.component';
@@ -48,7 +50,7 @@ import { ConsultaEditarComponent } from './page/consulta/consulta-editar/consult
 import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consulta-buscar.component';
 
 
-//consulta
+
 
 
 @NgModule({
@@ -80,6 +82,7 @@ import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consult
     PreguntaEditarComponent,
     PreguntaBuscarComponent,
     PreguntaDialogoComponent,
+    ///consulta
     ConsultaComponent,
     ConsultaListarComponent,
     ConsultaDialogoComponent,
@@ -89,9 +92,6 @@ import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consult
     
     
 
-
-
-    //consulta
    
   ],
   imports: [

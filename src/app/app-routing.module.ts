@@ -1,3 +1,4 @@
+import { ConsultaEditarComponent } from './page/consulta/consulta-editar/consulta-editar.component';
 import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,6 +11,7 @@ import { PacienteEditarComponent } from './page/paciente/paciente-editar/pacient
 //pregunta
 import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
 import { PreguntaComponent } from './page/pregunta/pregunta.component';
+import { ConsultaComponent } from './page/consulta/consulta.component';
 
 const routes: Routes = [
   {
@@ -29,7 +31,20 @@ const routes: Routes = [
       {path:'nuevo', component:PreguntaEditarComponent},
       {path:'edicion/:id', component:PreguntaEditarComponent}
   ]
+},
+
+{
+  path:'consulta', component: ConsultaComponent, children:[
+      {path: 'nuevo', component: ConsultaEditarComponent},
+      {path: 'edicion/:id', component: ConsultaEditarComponent}
+  ]
 }
+
+
+
+
+
+
 
 ];
 
