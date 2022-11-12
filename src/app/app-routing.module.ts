@@ -1,4 +1,3 @@
-import { ConsultaEditarComponent } from './page/consulta/consulta-editar/consulta-editar.component';
 import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -11,9 +10,16 @@ import { PacienteEditarComponent } from './page/paciente/paciente-editar/pacient
 //pregunta
 import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
 import { PreguntaComponent } from './page/pregunta/pregunta.component';
+//consulta
+import { ConsultaEditarComponent } from './page/consulta/consulta-editar/consulta-editar.component';
 import { ConsultaComponent } from './page/consulta/consulta.component';
+//encuesta
 import { EncuestaComponent } from './page/encuesta/encuesta.component';
 import { EncuestaEditarComponent } from './page/encuesta/encuesta-editar/encuesta-editar.component';
+//tarjeta
+import { TarjetaEditarComponent } from './page/tarjeta/tarjeta-editar/tarjeta-editar.component';
+import { TarjetaComponent } from './page/tarjeta/tarjeta.component';
+
 
 const routes: Routes = [
   {
@@ -34,7 +40,6 @@ const routes: Routes = [
       {path:'edicion/:id', component:PreguntaEditarComponent}
   ]
 },
-
 {
   path:'consulta', component: ConsultaComponent, children:[
       {path: 'nuevo', component: ConsultaEditarComponent},
@@ -43,12 +48,16 @@ const routes: Routes = [
 },
 {
   path:'encuesta', component: EncuestaComponent, children:[
-      {path: 'nuevo', component: EncuestaEditarComponent},
-      {path: 'edicion/:id', component: EncuestaEditarComponent}
+    {path: 'nuevo', component: EncuestaEditarComponent},
+    {path: 'edicion/:id', component: EncuestaEditarComponent}
+    ]
+},  
+{
+  path:'tarjeta', component: TarjetaComponent, children:[
+      {path:'nuevo', component:TarjetaEditarComponent},
+      {path:'edicion/:id', component:TarjetaEditarComponent}
   ]
 }
-
-
 ];
 
 @NgModule({

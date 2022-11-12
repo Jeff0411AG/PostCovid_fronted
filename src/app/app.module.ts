@@ -25,9 +25,6 @@ import { DoctorEditarComponent } from './page/doctor/doctor-editar/doctor-editar
 import { DoctorBuscarComponent } from './page/doctor/doctor-buscar/doctor-buscar.component';
 import { DoctorDialogoComponent } from './page/doctor/doctor-listar/doctor-dialogo/doctor-dialogo.component';
 
-//Encuesta
-import { EncuestaComponent } from './page/encuesta/encuesta.component';
-
 //paciente
 import { PacienteComponent } from './page/paciente/paciente.component';
 import { PacienteBuscarComponent } from './page/paciente/paciente-buscar/paciente-buscar.component';
@@ -41,10 +38,21 @@ import { PreguntaListarComponent } from './page/pregunta/pregunta-listar/pregunt
 import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
 import { PreguntaBuscarComponent } from './page/pregunta/pregunta-buscar/pregunta-buscar.component';
 import { PreguntaDialogoComponent } from './page/pregunta/pregunta-listar/pregunta-dialogo/pregunta-dialogo.component';
+
+//encuesta
+import { EncuestaComponent } from './page/encuesta/encuesta.component';
 import { EncuestaListarComponent } from './page/encuesta/encuesta-listar/encuesta-listar.component';
 import { EncuestaEditarComponent } from './page/encuesta/encuesta-editar/encuesta-editar.component';
 import { EncuestaBuscarComponent } from './page/encuesta/encuesta-buscar/encuesta-buscar.component';
 import { EncuestaDialogoComponent } from './page/encuesta/encuesta-listar/encuesta-dialogo/encuesta-dialogo.component';
+
+//Tarjeta
+import { TarjetaComponent } from './page/tarjeta/tarjeta.component';
+import { TarjetaListarComponent } from './page/tarjeta/tarjeta-listar/tarjeta-listar.component';
+import { TarjetaEditarComponent } from './page/tarjeta/tarjeta-editar/tarjeta-editar.component';
+import { TarjetaBuscarComponent } from './page/tarjeta/tarjeta-buscar/tarjeta-buscar.component';
+import { TarjetaDialogoComponent } from './page/tarjeta/tarjeta-listar/tarjeta-dialogo/tarjeta-dialogo.component';
+
 
 //consulta
 import { ConsultaComponent } from './page/consulta/consulta.component';
@@ -83,6 +91,7 @@ import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consult
     PreguntaBuscarComponent,
     PreguntaDialogoComponent,
 
+
     //encuesta
     EncuestaComponent,
     EncuestaListarComponent,
@@ -96,6 +105,16 @@ import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consult
     ConsultaDialogoComponent,
     ConsultaEditarComponent,
     ConsultaBuscarComponent,
+
+     //tarjeta
+     TarjetaComponent,
+     TarjetaListarComponent,
+     TarjetaEditarComponent,
+     TarjetaBuscarComponent,
+     TarjetaDialogoComponent,
+
+    
+  
 
 
    
