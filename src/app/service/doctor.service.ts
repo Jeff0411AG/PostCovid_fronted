@@ -11,8 +11,10 @@ export class DoctorService {
   //private url:string=environment.host+"/        "
 
   //private url: string = `${environment.host}/doctor`
+  //https://post-covid-backend.herokuapp.com/doctor
+  //private url: string = "http://localhost:8084/doctor"
+  private url: string = "https://post-covid-backend.herokuapp.com/doctor"
 
-  private url: string = "http://localhost:8084/doctor"
 
   
   private listaCambio = new Subject<Doctor[]>()
