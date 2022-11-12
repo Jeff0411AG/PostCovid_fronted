@@ -46,8 +46,15 @@ import { EncuestaEditarComponent } from './page/encuesta/encuesta-editar/encuest
 import { EncuestaBuscarComponent } from './page/encuesta/encuesta-buscar/encuesta-buscar.component';
 import { EncuestaDialogoComponent } from './page/encuesta/encuesta-listar/encuesta-dialogo/encuesta-dialogo.component';
 
-
 //consulta
+import { ConsultaComponent } from './page/consulta/consulta.component';
+import { ConsultaListarComponent } from './page/consulta/consulta-listar/consulta-listar.component';
+import { ConsultaDialogoComponent } from './page/consulta/consulta-listar/consulta-dialogo/consulta-dialogo.component';
+import { ConsultaEditarComponent } from './page/consulta/consulta-editar/consulta-editar.component';
+import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consulta-buscar.component';
+
+
+
 
 
 @NgModule({
@@ -60,10 +67,6 @@ import { EncuestaDialogoComponent } from './page/encuesta/encuesta-listar/encues
     DoctorEditarComponent,
     DoctorBuscarComponent,
     DoctorDialogoComponent,
-
-    //Encuesta
-      EncuestaComponent,
-      
 
     //paciente
     PacienteComponent,
@@ -79,12 +82,22 @@ import { EncuestaDialogoComponent } from './page/encuesta/encuesta-listar/encues
     PreguntaEditarComponent,
     PreguntaBuscarComponent,
     PreguntaDialogoComponent,
+
+    //encuesta
+    EncuestaComponent,
     EncuestaListarComponent,
     EncuestaEditarComponent,
     EncuestaBuscarComponent,
     EncuestaDialogoComponent,
    
-    //consulta
+    ///consulta
+    ConsultaComponent,
+    ConsultaListarComponent,
+    ConsultaDialogoComponent,
+    ConsultaEditarComponent,
+    ConsultaBuscarComponent,
+
+
    
   ],
   imports: [
