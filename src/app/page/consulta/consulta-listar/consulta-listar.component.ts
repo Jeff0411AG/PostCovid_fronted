@@ -28,9 +28,11 @@ export class ConsultaListarComponent implements OnInit {
     this.consultaService.getLista().subscribe(data=> {
       this.dataSource = new MatTableDataSource(data);
       console.log(data);
-    })
+    });
 
-
+    this.consultaService.getConfirmaEliminacion().subscribe(data =>{
+      data == true ? this.eliminar(this.idMayor) : false;
+    });
   }
 
   confirmar(id: number){
@@ -39,7 +41,16 @@ export class ConsultaListarComponent implements OnInit {
   }
 
   eliminar(id:number){
+    this.consultaService.eliminar(id).subscribe(()=>{
+      this.consultaService.listar().subscribe(data =>{
+        this.consultaService.setLista(data);
+      });
+    });
     
+  }
+
+  filtrar(e:any){
+    this.dataSource.filter= e.target.value.trim();
   }
 
 
