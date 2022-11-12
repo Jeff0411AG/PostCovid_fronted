@@ -13,7 +13,9 @@ export class PacienteService {
   //private url: string = `${environment.host}/paciente`
     //http://localhost:8084/paciente
   
-    private url: string = "https://post-covid-backend.herokuapp.com/paciente"
+    //private url: string = "https://post-covid-backend.herokuapp.com/paciente"
+    private url: string = "http://localhost:8084/paciente"
+
     private listaCambio = new Subject<Paciente[]>()
     private confirmaEliminacion = new Subject<Boolean>()
     constructor(private http: HttpClient) { }

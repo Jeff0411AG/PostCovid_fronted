@@ -8,46 +8,43 @@
 </head>
 <body>
     
-    <div class="container" >
+    <div class="container">
         <h1>Encuesta</h1>
         
-        <mat-form-field style="margin: 10px" class="example-full-width">
+        <mat-form-field class="example-full-width">
             <mat-label>Id</mat-label>
-            <input matInput  placeholder="idEncuesta" [(ngModel)]="encuesta.idEncuesta">
+            <input matInput placeholder="idVehiculo" [(ngModel)]="encuesta.idEncuesta">
         </mat-form-field>
         
         <br>
         
-        <mat-form-field style="margin: 10px" class="example-full-width">
-            <mat-label>fechaEncuesta</mat-label>
-            <input matInput required placeholder="fechaEncuesta" [(ngModel)]="encuesta.fechaEncuesta">
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha de encuesta</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="fechaSeleccionada" [max]="maxFecha">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
         <br>
-        <mat-form-field style="margin: 10px" class="example-full-width">
+        <mat-form-field class="example-full-width">
             <mat-label>anotaciones</mat-label>
-            <input matInput required placeholder="anotaciones" [(ngModel)]="encuesta.anotaciones">
-        </mat-form-field>  
+            <input matInput placeholder="Licencia" [(ngModel)]="encuesta.anotaciones">
+        </mat-form-field>
         
-        <!--- Para el ManyToOne  -->
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Seleccione paciente</mat-label>
             <mat-select [(value)]="idPacienteSeleccionado" required>
-                <mat-option *ngFor="let d of listaPacientes" [value]="d.idPaciente">
-                    {{d.namePaciente}}
+                <mat-option *ngFor="let p of listaPacientes" [value]="p.idPaciente">
+                    {{p.namePaciente}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
- 
-        <!--- Para el ManyToOne  -->
-
         <br>
-
-        <button style="margin: 10px" mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
-        <button style="margin: 10px" mat-raised-button color="accent" routerLink="/paciente">Cancelar</button>
-        <p>{{mensaje}}</p>
+        <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+        <button mat-raised-button color="accent" routerLink="/encuesta">Cancelar</button>
         </div>
+        
         
 </body>
 </html>
