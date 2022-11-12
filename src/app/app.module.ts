@@ -62,9 +62,6 @@ import { ConsultaEditarComponent } from './page/consulta/consulta-editar/consult
 import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consulta-buscar.component';
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

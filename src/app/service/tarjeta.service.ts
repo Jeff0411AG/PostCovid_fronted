@@ -10,8 +10,8 @@ import { Injectable } from '@angular/core';
 })
 export class TarjetaService {
 
-  private url:string = "http://localhost:8084/tarjeta";
-  //private url: string = "https://post-covid-backend.herokuapp.com/tarjeta"
+  //private url:string = "http://localhost:8084/tarjeta";
+  private url: string = "https://post-covid-backend.herokuapp.com/tarjeta"
   private listaCambio = new Subject<Tarjeta[]>();
   private confirmaEliminacion=new Subject<Boolean>();
 
