@@ -41,6 +41,10 @@ import { PreguntaListarComponent } from './page/pregunta/pregunta-listar/pregunt
 import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
 import { PreguntaBuscarComponent } from './page/pregunta/pregunta-buscar/pregunta-buscar.component';
 import { PreguntaDialogoComponent } from './page/pregunta/pregunta-listar/pregunta-dialogo/pregunta-dialogo.component';
+import { EncuestaListarComponent } from './page/encuesta/encuesta-listar/encuesta-listar.component';
+import { EncuestaEditarComponent } from './page/encuesta/encuesta-editar/encuesta-editar.component';
+import { EncuestaBuscarComponent } from './page/encuesta/encuesta-buscar/encuesta-buscar.component';
+import { EncuestaDialogoComponent } from './page/encuesta/encuesta-listar/encuesta-dialogo/encuesta-dialogo.component';
 
 
 //consulta
@@ -50,23 +54,23 @@ import { PreguntaDialogoComponent } from './page/pregunta/pregunta-listar/pregun
   declarations: [
     AppComponent,
     
-    //Doctor-Jefferson
+    //Doctor
     DoctorComponent,
     DoctorListarComponent,
     DoctorEditarComponent,
     DoctorBuscarComponent,
     DoctorDialogoComponent,
 
-    //Encuesta-Jefferson
+    //Encuesta
       EncuestaComponent,
       
 
-      //paciente
-      PacienteComponent,
-      PacienteBuscarComponent,
-      PacienteEditarComponent,
-      PacienteListarComponent,
-      PacienteDialogoComponent,
+    //paciente
+    PacienteComponent,
+    PacienteBuscarComponent,
+    PacienteEditarComponent,
+    PacienteListarComponent,
+    PacienteDialogoComponent,
 
 
     //pregunta
@@ -75,12 +79,11 @@ import { PreguntaDialogoComponent } from './page/pregunta/pregunta-listar/pregun
     PreguntaEditarComponent,
     PreguntaBuscarComponent,
     PreguntaDialogoComponent,
-
-    
-    
-
-
-
+    EncuestaListarComponent,
+    EncuestaEditarComponent,
+    EncuestaBuscarComponent,
+    EncuestaDialogoComponent,
+   
     //consulta
    
   ],
