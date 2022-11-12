@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { EncuestaService } from '../../../../service/encuesta.service';
 
 @Component({
   selector: 'app-encuesta-dialogo',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EncuestaDialogoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private encuestaService:EncuestaService, private dialogRef: MatDialogRef<EncuestaDialogoComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  confirmar(estado:boolean){
+    this.encuestaService.setConfirmaEliminacion(estado);
+    this.dialogRef.close();
+
   }
 
 }

@@ -1,1 +1,84 @@
-<p>encuesta-editar works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+</head>
+<body>
+    
+    <div class="container" >
+        <h1>Encuesta</h1>
+        
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput  placeholder="idEncuesta" [(ngModel)]="encuesta.idEncuesta">
+        </mat-form-field>
+        
+        <br>
+        
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>fechaEncuesta</mat-label>
+            <input matInput required placeholder="fechaEncuesta" [(ngModel)]="encuesta.fechaEncuesta">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field style="margin: 10px" class="example-full-width">
+            <mat-label>anotaciones</mat-label>
+            <input matInput required placeholder="anotaciones" [(ngModel)]="encuesta.anotaciones">
+        </mat-form-field>  
+        
+        <!--- Para el ManyToOne  -->
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Seleccione paciente</mat-label>
+            <mat-select [(value)]="idPacienteSeleccionado" required>
+                <mat-option *ngFor="let d of listaPacientes" [value]="d.idPaciente">
+                    {{d.namePaciente}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+ 
+        <!--- Para el ManyToOne  -->
+
+        <br>
+
+        <button style="margin: 10px" mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+        <button style="margin: 10px" mat-raised-button color="accent" routerLink="/paciente">Cancelar</button>
+        <p>{{mensaje}}</p>
+        </div>
+        
+</body>
+</html>
+
+
+
+<!--
+<div class="container">
+    <h1>Propietario</h1>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput  placeholder="idPregunta" [(ngModel)]="pregunta.idPregunta">
+    </mat-form-field>
+    
+    <br>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput required placeholder="descripcion" [(ngModel)]="pregunta.descripcion">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput required placeholder="respuesta" [(ngModel)]="pregunta.respuesta">
+    </mat-form-field>
+    
+    <br>
+    <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="accent" routerLink="/pregunta">Cancelar</button>
+    <p>{{mensaje}}</p>
+    </div>
+    
+!-->

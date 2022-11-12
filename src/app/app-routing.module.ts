@@ -12,6 +12,8 @@ import { PacienteEditarComponent } from './page/paciente/paciente-editar/pacient
 import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
 import { PreguntaComponent } from './page/pregunta/pregunta.component';
 import { ConsultaComponent } from './page/consulta/consulta.component';
+import { EncuestaComponent } from './page/encuesta/encuesta.component';
+import { EncuestaEditarComponent } from './page/encuesta/encuesta-editar/encuesta-editar.component';
 
 const routes: Routes = [
   {
@@ -38,12 +40,13 @@ const routes: Routes = [
       {path: 'nuevo', component: ConsultaEditarComponent},
       {path: 'edicion/:id', component: ConsultaEditarComponent}
   ]
+},
+{
+  path:'encuesta', component: EncuestaComponent, children:[
+      {path: 'nuevo', component: EncuestaEditarComponent},
+      {path: 'edicion/:id', component: EncuestaEditarComponent}
+  ]
 }
-
-
-
-
-
 
 
 ];
