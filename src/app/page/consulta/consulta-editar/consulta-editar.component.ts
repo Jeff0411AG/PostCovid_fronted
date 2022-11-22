@@ -6,6 +6,7 @@ import { Paciente } from 'src/app/model/paciente';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { DoctorService } from 'src/app/service/doctor.service';
 import { PacienteService } from 'src/app/service/paciente.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-consulta-editar',
@@ -29,6 +30,12 @@ export class ConsultaEditarComponent implements OnInit {
   listaPacientes: Paciente[]=[];
   idPacienteSeleccionado:number=0;
   mensaje2:string="";
+
+  ////Fecha
+  fechaSeleccionada: Date = moment().add(-1,'days').toDate();
+  maxFecha:Date=moment().add(-1,'days').toDate();
+
+
 
 
   constructor(private consultaService: ConsultaService, private route: ActivatedRoute, private router: Router,
@@ -54,8 +61,8 @@ export class ConsultaEditarComponent implements OnInit {
   }
 
   aceptar(){
-    if(this.consulta.diagnositco.length>0 && this.consulta.fechaConsulta.length>0 
-      && this.consulta.observacion.length>0 && this.idDoctorSeleccionado>0 && this.idPacienteSeleccionado>0){
+    
+    if(this.consulta.diagnositco.length>0 && /*this.consulta.fechaConsulta>0 &&*/this.consulta.observacion.length>0 && this.idDoctorSeleccionado>0 && this.idPacienteSeleccionado>0){
         ///manyToOne
         let d =new Doctor();
         d.idDoctor=this.idDoctorSeleccionado;
@@ -64,6 +71,8 @@ export class ConsultaEditarComponent implements OnInit {
         let p = new Paciente();
         p.idPaciente=this.idPacienteSeleccionado;
         this.consulta.paciente=p;
+        ///Fecha
+        this.consulta.fechaConsulta=moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss')
 
         if(this.edicion){
           this.consultaService.modificar(this.consulta).subscribe(()=>{

@@ -10,8 +10,8 @@ import { Injectable } from '@angular/core';
 })
 export class PreguntaService {
 
-  //private url:string = "http://localhost:8084/pregunta";
-  private url: string = "https://post-covid-backend.herokuapp.com/pregunta"
+  private url:string = "http://localhost:8084/pregunta";
+  //private url: string = "https://post-covid-backend.herokuapp.com/pregunta"
   private listaCambio = new Subject<Pregunta[]>();
   private confirmaEliminacion=new Subject<Boolean>();
 

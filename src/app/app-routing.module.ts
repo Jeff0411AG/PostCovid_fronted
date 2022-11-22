@@ -1,3 +1,4 @@
+import { ConsultaCantidadconsultaComponent } from './page/consulta/consulta-cantidadconsulta/consulta-cantidadconsulta.component';
 import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -43,7 +44,8 @@ const routes: Routes = [
 {
   path:'consulta', component: ConsultaComponent, children:[
       {path: 'nuevo', component: ConsultaEditarComponent},
-      {path: 'edicion/:id', component: ConsultaEditarComponent}
+      {path: 'edicion/:id', component: ConsultaEditarComponent},
+      {path: 'Querry1', component: ConsultaCantidadconsultaComponent}
   ]
 },
 {
