@@ -24,9 +24,13 @@ export class ConsultaService {
     return this.http.post(this.url, consulta);
   }
 
-  ///Querry
+  ///Querry1
   buscarCantidadconsutla() {
     return this.http.get<CantidadConsulta[]>(`${this.url}/Querry1`);
+  }
+  ////Querry2
+  buscarConsultaNoviembre() {
+    return this.http.get<Consulta[]>(`${this.url}/Querry2`);
   }
   ////
 

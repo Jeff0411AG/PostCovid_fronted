@@ -61,6 +61,7 @@ import { ConsultaDialogoComponent } from './page/consulta/consulta-listar/consul
 import { ConsultaEditarComponent } from './page/consulta/consulta-editar/consulta-editar.component';
 import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consulta-buscar.component';
 import { ConsultaCantidadconsultaComponent } from './page/consulta/consulta-cantidadconsulta/consulta-cantidadconsulta.component';
+import { ConsultaConsultanoviembreComponent } from './page/consulta/consulta-consultanoviembre/consulta-consultanoviembre.component';
 
 
 @NgModule({
@@ -111,6 +112,7 @@ import { ConsultaCantidadconsultaComponent } from './page/consulta/consulta-cant
      TarjetaBuscarComponent,
      TarjetaDialogoComponent,
      ConsultaCantidadconsultaComponent,
+     ConsultaConsultanoviembreComponent,
 
     
   

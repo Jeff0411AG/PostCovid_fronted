@@ -2,16 +2,19 @@
 <div class="container">
     <h1> Lista de Consultas </h1>
     
-    <app-pregunta-buscar></app-pregunta-buscar>  <!--Búsqueda usando BD-->
+    <!--Búsqueda usando BD-->
+    <app-consulta-buscar></app-consulta-buscar>   
     
 
-    <!--Búsqueda en el front/cliente
+    
     <mat-form-field style="margin: 10px">
-        <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+        <input matInput (keyup)="filtrar($event)" placeholder="Buscar por Diagnostico">
     </mat-form-field>
-    -->
+    
 
     <button type="button" class="btn btn-danger" routerLink="/consulta/Querry1" style="margin: 20px"> Consultas por Doctores </button>
+
+    <button type="button" class="btn btn-danger" routerLink="/consulta/Querry2" style="margin: 20px"> Consultas Noviembre </button>
     
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
     
