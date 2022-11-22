@@ -8,7 +8,9 @@
     <mat-form-field style="margin: 10px">
         <input matInput (keyup)="filtrar($event)" placeholder="Buscar por descripcion o respuesta">
     </mat-form-field>
-    
+
+    <button type="button" class="btn btn-danger" routerLink="/pregunta/Querry1" style="margin: 20px"> Cantidad preguntas por Doctor </button>
+
     
     
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >

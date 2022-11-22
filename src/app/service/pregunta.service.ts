@@ -25,6 +25,12 @@ export class PreguntaService {
     return this.http.post(this.url,pregunta);
   }
 
+  ///Querrys TF
+  catidadpreguntas(){
+    return this.http.get<any>(`${this.url}/buscarCantidad`);
+  }
+
+
   modificar(pregunta: Pregunta){
     return this.http.put(this.url, pregunta);
   }
