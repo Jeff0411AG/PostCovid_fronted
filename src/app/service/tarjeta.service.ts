@@ -38,10 +38,19 @@ export class TarjetaService {
     return this.http.delete(`${this.url}/${id}`);
   }
 
-  buscar(texto: string) {
+  /*buscar(texto: string) {
 
     return this.http.post<Tarjeta[]>(`${this.url}/buscar`, texto);
+  }*/
+
+  buscar(texto:string){
+    console.log("algo")
+    if(texto.length !=0){
+      return this.http.post<Tarjeta[]>(`${this.url}/buscarNumero`, texto.toUpperCase());
+    }
+    return EMPTY;
   }
+
   
   listarId(id: number) {
 
