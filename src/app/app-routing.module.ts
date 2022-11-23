@@ -1,3 +1,6 @@
+import { PreguntaCantidadminComponent } from './page/pregunta/pregunta-cantidadmin/pregunta-cantidadmin.component';
+import { PreguntaCantidadComponent } from './page/pregunta/pregunta-cantidad/pregunta-cantidad.component';
+import { ConsultaCantidadconsultaComponent } from './page/consulta/consulta-cantidadconsulta/consulta-cantidadconsulta.component';
 import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -19,6 +22,7 @@ import { EncuestaEditarComponent } from './page/encuesta/encuesta-editar/encuest
 //tarjeta
 import { TarjetaEditarComponent } from './page/tarjeta/tarjeta-editar/tarjeta-editar.component';
 import { TarjetaComponent } from './page/tarjeta/tarjeta.component';
+import { ConsultaConsultanoviembreComponent } from './page/consulta/consulta-consultanoviembre/consulta-consultanoviembre.component';
 
 
 const routes: Routes = [
@@ -37,13 +41,18 @@ const routes: Routes = [
 {
   path:'pregunta', component: PreguntaComponent, children:[
       {path:'nuevo', component:PreguntaEditarComponent},
-      {path:'edicion/:id', component:PreguntaEditarComponent}
+      {path:'edicion/:id', component:PreguntaEditarComponent},
+      {path:'Querry1', component:PreguntaCantidadComponent},
+      {path:'Querry2', component:PreguntaCantidadminComponent}
   ]
 },
 {
   path:'consulta', component: ConsultaComponent, children:[
       {path: 'nuevo', component: ConsultaEditarComponent},
-      {path: 'edicion/:id', component: ConsultaEditarComponent}
+      {path: 'edicion/:id', component: ConsultaEditarComponent},
+      {path: 'Querry1', component: ConsultaCantidadconsultaComponent},
+      {path: 'Querry2', component: ConsultaConsultanoviembreComponent}
+
   ]
 },
 {

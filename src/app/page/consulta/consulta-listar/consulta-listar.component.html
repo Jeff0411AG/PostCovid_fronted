@@ -2,14 +2,19 @@
 <div class="container">
     <h1> Lista de Consultas </h1>
     
-    <app-pregunta-buscar></app-pregunta-buscar>  <!--Búsqueda usando BD-->
+    <!--Búsqueda usando BD
+    <app-consulta-buscar></app-consulta-buscar>   -->
+    
 
-    <!--Búsqueda en el front/cliente-->
+    
     <mat-form-field style="margin: 10px">
-        <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+        <input matInput (keyup)="filtrar($event)" placeholder="Buscar por Diagnostico">
     </mat-form-field>
     
-    
+
+    <button type="button" class="btn btn-danger" routerLink="/consulta/Querry1" style="margin: 20px"> Consultas por Doctores </button>
+
+    <button type="button" class="btn btn-danger" routerLink="/consulta/Querry2" style="margin: 20px"> Consultas Noviembre </button>
     
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
     
@@ -27,7 +32,7 @@
     
         <!-- Weight Column -->
         <ng-container matColumnDef="diagnositco">
-            <th mat-header-cell *matHeaderCellDef> diagnositco </th>
+            <th mat-header-cell *matHeaderCellDef> diagnostico </th>
             <td mat-cell *matCellDef="let element"> {{element.diagnositco}} </td>
         </ng-container>
 
@@ -37,27 +42,17 @@
             <td mat-cell *matCellDef="let element"> {{element.observacion}} </td>
         </ng-container>
 
-
         <!-- Weight Column -->
          <ng-container matColumnDef="doctor">
              <th mat-header-cell *matHeaderCellDef> Doctor </th>
             <td mat-cell *matCellDef="let element"> {{element.doctor.nameDoctor}} </td>
          </ng-container>
 
-
          <!-- Weight Column -->
          <ng-container matColumnDef="paciente">
             <th mat-header-cell *matHeaderCellDef> Paciente </th>
            <td mat-cell *matCellDef="let element"> {{element.paciente.namePaciente}} </td>
         </ng-container>
-
-        
-
-
-
-
-
-
     
         <!-- Symbol Column -->
         <ng-container matColumnDef="acciones">

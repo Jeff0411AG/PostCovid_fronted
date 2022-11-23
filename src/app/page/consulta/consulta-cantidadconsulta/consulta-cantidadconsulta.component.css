@@ -1,0 +1,10 @@
+table {
+    width: 20%;
+    
+  }
+
+th{
+  text-align:center;
+  font-weight: bold;
+  font-size: 20px;
+}

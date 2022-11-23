@@ -10,8 +10,8 @@ import { Injectable } from '@angular/core';
 })
 export class PreguntaService {
 
-  //private url:string = "http://localhost:8084/pregunta";
-  private url: string = "https://post-covid-backend.herokuapp.com/pregunta"
+  private url:string = "http://localhost:8084/pregunta";
+  //private url: string = "https://post-covid-backend.herokuapp.com/pregunta"
   private listaCambio = new Subject<Pregunta[]>();
   private confirmaEliminacion=new Subject<Boolean>();
 
@@ -24,6 +24,16 @@ export class PreguntaService {
   insertar(pregunta: Pregunta){
     return this.http.post(this.url,pregunta);
   }
+
+  ///Querrys TF
+  catidadpreguntas(){
+    return this.http.get<any>(`${this.url}/buscarCantidad`);
+  }
+  ///
+  doctoresconmenospreguntas(){
+    return this.http.get<any>(`${this.url}/CantidadmenorPreguntas`);
+  }
+  ////
 
   modificar(pregunta: Pregunta){
     return this.http.put(this.url, pregunta);
