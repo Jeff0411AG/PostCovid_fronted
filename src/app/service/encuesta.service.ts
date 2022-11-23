@@ -5,6 +5,7 @@ import { Subject, EMPTY } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Encuesta } from '../model/encuesta';
+import { CantidadEncuestas } from '../model/cantidadEncuestas';
 
 
 @Injectable({
@@ -56,4 +57,17 @@ export class EncuestaService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+
+
+  buscarNoviembre() {
+    return this.http.get<Encuesta[]>(`${this.url}/buscarNoviembre`);
+  }
+
+  cantidadEncuestas() {
+    return this.http.get<CantidadEncuestas[]>(`${this.url}/cantidadEncuestas`);
+  }
+
+  
+
+
 }

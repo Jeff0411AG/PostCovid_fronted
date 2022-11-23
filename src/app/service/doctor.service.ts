@@ -60,4 +60,11 @@ export class DoctorService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+
+
+
+  
+
+
+
 }

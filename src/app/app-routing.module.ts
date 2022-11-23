@@ -24,6 +24,8 @@ import { EncuestaEditarComponent } from './page/encuesta/encuesta-editar/encuest
 import { TarjetaEditarComponent } from './page/tarjeta/tarjeta-editar/tarjeta-editar.component';
 import { TarjetaComponent } from './page/tarjeta/tarjeta.component';
 import { ConsultaConsultanoviembreComponent } from './page/consulta/consulta-consultanoviembre/consulta-consultanoviembre.component';
+import { EncuestaNoviembreComponent } from './page/encuesta/encuesta-noviembre/encuesta-noviembre.component';
+import { EncuestaCantidadComponent } from './page/encuesta/encuesta-cantidad/encuesta-cantidad.component';
 
 
 const routes: Routes = [
@@ -60,7 +62,9 @@ const routes: Routes = [
 {
   path:'encuesta', component: EncuestaComponent, children:[
     {path: 'nuevo', component: EncuestaEditarComponent},
-    {path: 'edicion/:id', component: EncuestaEditarComponent}
+    {path: 'edicion/:id', component: EncuestaEditarComponent},
+    {path:'buscarNoviembre', component:EncuestaNoviembreComponent},
+    {path:'cantidadEncuestas', component:EncuestaCantidadComponent}
     ]
 },  
 {

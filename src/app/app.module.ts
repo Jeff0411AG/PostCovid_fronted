@@ -65,6 +65,9 @@ import { ConsultaCantidadconsultaComponent } from './page/consulta/consulta-cant
 import { ConsultaConsultanoviembreComponent } from './page/consulta/consulta-consultanoviembre/consulta-consultanoviembre.component';
 import { PreguntaCantidadComponent } from './page/pregunta/pregunta-cantidad/pregunta-cantidad.component';
 import { PreguntaCantidadminComponent } from './page/pregunta/pregunta-cantidadmin/pregunta-cantidadmin.component';
+import { EncuestaNoviembreComponent } from './page/encuesta/encuesta-noviembre/encuesta-noviembre.component';
+import { EncuestaCantidadComponent } from './page/encuesta/encuesta-cantidad/encuesta-cantidad.component';
+
 
 
 @NgModule({
@@ -119,6 +122,9 @@ import { PreguntaCantidadminComponent } from './page/pregunta/pregunta-cantidadm
      ConsultaConsultanoviembreComponent,
      PreguntaCantidadComponent,
      PreguntaCantidadminComponent,
+     EncuestaNoviembreComponent,
+     EncuestaCantidadComponent,
+   
 
     
   
