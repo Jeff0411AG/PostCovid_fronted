@@ -14,7 +14,6 @@ export class TarjetaListarComponent implements OnInit {
 
   lista: Tarjeta[] = [];
   dataSource:MatTableDataSource<Tarjeta> =new MatTableDataSource();
-  ///añadimos el manyToOne
   displayedColumns:String[] = ['idTarjeta','metodoPayment','numberAccount','dateExpiration','numberCvc','paciente','acciones'];
 
   private idMayor: number= 0;

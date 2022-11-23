@@ -19,6 +19,7 @@ import { EncuestaEditarComponent } from './page/encuesta/encuesta-editar/encuest
 //tarjeta
 import { TarjetaEditarComponent } from './page/tarjeta/tarjeta-editar/tarjeta-editar.component';
 import { TarjetaCantidadComponent } from './page/tarjeta/tarjeta-cantidad/tarjeta-cantidad.component';
+import { TarjetaDominioComponent } from './page/tarjeta/tarjeta-dominio/tarjeta-dominio.component';
 import { TarjetaComponent } from './page/tarjeta/tarjeta.component';
 
 
@@ -57,7 +58,8 @@ const routes: Routes = [
   path:'tarjeta', component: TarjetaComponent, children:[
       {path:'nuevo', component:TarjetaEditarComponent},
       {path:'edicion/:id', component:TarjetaEditarComponent},
-      {path:'CantidadTarjetasporPaciente', component:TarjetaCantidadComponent}
+      {path:'CantidadTarjetasporPaciente', component:TarjetaCantidadComponent},
+      {path:'buscarNumeroDominio', component:TarjetaDominioComponent}
   ]
 }
 ];

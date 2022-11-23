@@ -18,8 +18,15 @@ export class TarjetaService {
 
   constructor(private http:HttpClient) { }
 
-  listar(){
+  /*listar(){
     return this.http.get<any>(this.url);
+  }*/
+  listar(){
+    return this.http.get<Tarjeta[]>(this.url);
+  }
+
+  dominio(){
+    return this.http.get<Tarjeta[]>(`${this.url}/buscarNumeroDominio`);
   }
 
   insertar(tarjeta: Tarjeta){
