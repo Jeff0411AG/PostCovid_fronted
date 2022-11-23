@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paciente-dominio.component.css']
 })
 export class PacienteDominioComponent implements OnInit {
-  lista: Paciente[] = [];
   dataSource: MatTableDataSource<Paciente> = new MatTableDataSource();
+  dataSource2: MatTableDataSource<Paciente> = new MatTableDataSource();
   displayedColumns: string[] = ['idPaciente', 'namePaciente', 'lastNamePaciente','birthday','numberPhone','numhistoria','diagnostico','version'];
 
   constructor(private pS: PacienteService) { }
@@ -19,7 +19,11 @@ export class PacienteDominioComponent implements OnInit {
 
     this.pS.dominio().subscribe(data=>{
       this.dataSource= new MatTableDataSource(data);
+      });
+    this.pS.dominio2().subscribe(data=>{
+      this.dataSource2 = new MatTableDataSource(data);
       })
     }
+    
   }
 

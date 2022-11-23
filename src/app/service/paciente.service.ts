@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { EMPTY,Subject } from 'rxjs';
-import { environment } from 'src/environments/environment';
+//import { environment } from 'src/environments/environment';
 import { Paciente } from '../model/paciente';
 
 @Injectable({
@@ -25,7 +25,10 @@ export class PacienteService {
       return this.http.get<Paciente[]>(this.url);
     }
     dominio() {
-      return this.http.get<Paciente[]>(`${this.url}/buscarmayoredad`);
+      return this.http.get<Paciente[]>(`${this.url}/buscar mayores de edad`);
+    }
+    dominio2() {
+      return this.http.get<Paciente[]>(`${this.url}/buscar segundo dx`);
     }
     insertar(paciente: Paciente) {
   
