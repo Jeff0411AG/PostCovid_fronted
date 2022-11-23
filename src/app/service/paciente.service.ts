@@ -20,8 +20,15 @@ export class PacienteService {
     private confirmaEliminacion = new Subject<Boolean>()
     constructor(private http: HttpClient) { }
   
+
     listar() {
       return this.http.get<Paciente[]>(this.url);
+    }
+    dominio() {
+      return this.http.get<Paciente[]>(`${this.url}/buscar mayores de edad`);
+    }
+    dominio2() {
+      return this.http.get<Paciente[]>(`${this.url}/buscar segundo dx`);
     }
     insertar(paciente: Paciente) {
   
