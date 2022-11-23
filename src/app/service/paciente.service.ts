@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { EMPTY,Subject } from 'rxjs';
-//import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 import { Paciente } from '../model/paciente';
 
 @Injectable({
@@ -20,8 +20,12 @@ export class PacienteService {
     private confirmaEliminacion = new Subject<Boolean>()
     constructor(private http: HttpClient) { }
   
+
     listar() {
       return this.http.get<Paciente[]>(this.url);
+    }
+    dominio() {
+      return this.http.get<Paciente[]>(`${this.url}/buscarmayoredad`);
     }
     insertar(paciente: Paciente) {
   

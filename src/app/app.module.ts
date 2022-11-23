@@ -31,6 +31,7 @@ import { PacienteBuscarComponent } from './page/paciente/paciente-buscar/pacient
 import { PacienteEditarComponent } from './page/paciente/paciente-editar/paciente-editar.component';
 import { PacienteListarComponent } from './page/paciente/paciente-listar/paciente-listar.component';
 import { PacienteDialogoComponent } from './page/paciente/paciente-listar/paciente-dialogo/paciente-dialogo.component';
+import { PacienteDominioComponent } from './page/paciente/paciente-dominio/paciente-dominio.component';
 
 //Pregunta
 import { PreguntaComponent } from './page/pregunta/pregunta.component';
@@ -79,6 +80,7 @@ import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consult
     PacienteEditarComponent,
     PacienteListarComponent,
     PacienteDialogoComponent,
+    PacienteDominioComponent,
 
 
     //pregunta

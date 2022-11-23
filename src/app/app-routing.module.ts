@@ -7,6 +7,7 @@ import { DoctorComponent } from './page/doctor/doctor.component';
 //paciente
 import { PacienteComponent } from './page/paciente/paciente.component';
 import { PacienteEditarComponent } from './page/paciente/paciente-editar/paciente-editar.component';
+import { PacienteDominioComponent } from './page/paciente/paciente-dominio/paciente-dominio.component';
 //pregunta
 import { PreguntaEditarComponent } from './page/pregunta/pregunta-editar/pregunta-editar.component';
 import { PreguntaComponent } from './page/pregunta/pregunta.component';
@@ -31,7 +32,8 @@ const routes: Routes = [
 {
   path: 'paciente', component: PacienteComponent, children: [
       { path: 'nuevo', component: PacienteEditarComponent },
-      { path: 'edicion/:id', component: PacienteEditarComponent }
+      { path: 'edicion/:id', component: PacienteEditarComponent },
+      {path: 'reportes', component: PacienteDominioComponent}
   ]
 },
 {
