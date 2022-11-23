@@ -9,8 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ConsultaService {
 
-  private url: string = "http://localhost:8084/consulta"
-  //private url: string = "https://post-covid-backend.herokuapp.com/consulta";
+  //private url: string = "http://localhost:8084/consulta"
+  private url: string = "https://post-covid-backend.herokuapp.com/consulta";
   private listaCambio= new Subject<Consulta[]>();
   private confirmaEliminacion=new Subject<Boolean>();
 

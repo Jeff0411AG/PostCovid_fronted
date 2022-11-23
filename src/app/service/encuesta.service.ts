@@ -13,8 +13,8 @@ import { CantidadEncuestas } from '../model/cantidadEncuestas';
 })
 export class EncuestaService {
 
-  private url:string = "http://localhost:8084/Encuesta";
-  //private url: string = "https://post-covid-backend.herokuapp.com/Encuesta"
+  //private url:string = "http://localhost:8084/Encuesta";
+  private url: string = "https://post-covid-backend.herokuapp.com/Encuesta"
   
   //private url: string = `${environment.host}/vehiculos`
   private listaCambio = new Subject<Encuesta[]>()
