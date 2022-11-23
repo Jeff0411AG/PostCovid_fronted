@@ -61,12 +61,17 @@ import { ConsultaListarComponent } from './page/consulta/consulta-listar/consult
 import { ConsultaDialogoComponent } from './page/consulta/consulta-listar/consulta-dialogo/consulta-dialogo.component';
 import { ConsultaEditarComponent } from './page/consulta/consulta-editar/consulta-editar.component';
 import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consulta-buscar.component';
+
 import { ConsultaCantidadconsultaComponent } from './page/consulta/consulta-cantidadconsulta/consulta-cantidadconsulta.component';
 import { ConsultaConsultanoviembreComponent } from './page/consulta/consulta-consultanoviembre/consulta-consultanoviembre.component';
 import { PreguntaCantidadComponent } from './page/pregunta/pregunta-cantidad/pregunta-cantidad.component';
 import { PreguntaCantidadminComponent } from './page/pregunta/pregunta-cantidadmin/pregunta-cantidadmin.component';
 import { EncuestaNoviembreComponent } from './page/encuesta/encuesta-noviembre/encuesta-noviembre.component';
 import { EncuestaCantidadComponent } from './page/encuesta/encuesta-cantidad/encuesta-cantidad.component';
+
+
+import { TarjetaCantidadComponent } from './page/tarjeta/tarjeta-cantidad/tarjeta-cantidad.component';
+import { TarjetaDominioComponent } from './page/tarjeta/tarjeta-dominio/tarjeta-dominio.component';
 
 
 
@@ -125,6 +130,10 @@ import { EncuestaCantidadComponent } from './page/encuesta/encuesta-cantidad/enc
      EncuestaNoviembreComponent,
      EncuestaCantidadComponent,
    
+
+     TarjetaCantidadComponent,
+     TarjetaDominioComponent,
+
 
     
   

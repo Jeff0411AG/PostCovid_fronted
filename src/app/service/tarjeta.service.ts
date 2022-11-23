@@ -3,6 +3,7 @@ import { Tarjeta } from './../model/tarjeta';
 import { Subject, EMPTY } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ResultadoT } from '../model/resultadot';
 
 
 @Injectable({
@@ -10,19 +11,30 @@ import { Injectable } from '@angular/core';
 })
 export class TarjetaService {
 
-  //private url:string = "http://localhost:8084/tarjeta";
-  private url: string = "https://post-covid-backend.herokuapp.com/tarjeta"
+  private url:string = "http://localhost:8084/tarjeta";
+  //private url: string = "https://post-covid-backend.herokuapp.com/tarjeta"
   private listaCambio = new Subject<Tarjeta[]>();
   private confirmaEliminacion=new Subject<Boolean>();
 
   constructor(private http:HttpClient) { }
 
-  listar(){
+  /*listar(){
     return this.http.get<any>(this.url);
+  }*/
+  listar(){
+    return this.http.get<Tarjeta[]>(this.url);
+  }
+
+  dominio(){
+    return this.http.get<Tarjeta[]>(`${this.url}/dominios`);
   }
 
   insertar(tarjeta: Tarjeta){
     return this.http.post(this.url,tarjeta);
+  }
+
+  buscarTarjetas(){
+    return this.http.get<ResultadoT[]>(`${this.url}/cantidades`);
   }
 
   modificar(tarjeta: Tarjeta){
@@ -33,15 +45,20 @@ export class TarjetaService {
     return this.http.delete(`${this.url}/${id}`);
   }
 
-  ///buscar
+  /*buscar(texto: string) {
+
+    return this.http.post<Tarjeta[]>(`${this.url}/buscar`, texto);
+  }*/
+
   buscar(texto:string){
     console.log("algo")
     if(texto.length !=0){
-      return this.http.post<Tarjeta[]>(`${this.url}/buscar`, texto.toLowerCase());
+      return this.http.post<Tarjeta[]>(`${this.url}/buscarNumero`, texto.toUpperCase());
     }
     return EMPTY;
   }
 
+  
   listarId(id: number) {
 
     return this.http.get<Tarjeta>(`${this.url}/${id}`);

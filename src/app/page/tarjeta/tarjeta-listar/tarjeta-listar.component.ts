@@ -1,8 +1,8 @@
-import { TarjetaService } from './../../../service/tarjeta.service';
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { Tarjeta } from 'src/app/model/tarjeta';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
+import { Tarjeta } from '../../../model/tarjeta';
+import { TarjetaService } from '../../../service/tarjeta.service';
 import { TarjetaDialogoComponent } from './tarjeta-dialogo/tarjeta-dialogo.component';
 
 @Component({
@@ -14,7 +14,6 @@ export class TarjetaListarComponent implements OnInit {
 
   lista: Tarjeta[] = [];
   dataSource:MatTableDataSource<Tarjeta> =new MatTableDataSource();
-  ///añadimos el manyToOne
   displayedColumns:String[] = ['idTarjeta','metodoPayment','numberAccount','dateExpiration','numberCvc','paciente','acciones'];
 
   private idMayor: number= 0;
