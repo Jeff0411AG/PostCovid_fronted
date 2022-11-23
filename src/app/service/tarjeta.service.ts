@@ -26,7 +26,7 @@ export class TarjetaService {
   }
 
   dominio(){
-    return this.http.get<Tarjeta[]>(`${this.url}/buscarNumeroDominio`);
+    return this.http.get<Tarjeta[]>(`${this.url}/dominios`);
   }
 
   insertar(tarjeta: Tarjeta){

@@ -10,7 +10,7 @@ import { TarjetaService } from 'src/app/service/tarjeta.service';
 })
 export class TarjetaDominioComponent implements OnInit {
 
-  dataSource:MatTableDataSource<Tarjeta> =new MatTableDataSource();
+  dataSource: MatTableDataSource<Tarjeta> =new MatTableDataSource();
   displayedColumns: string[] = ['idTarjeta','metodoPayment','numberAccount','paciente'];
 
   constructor(private tS: TarjetaService) { }
